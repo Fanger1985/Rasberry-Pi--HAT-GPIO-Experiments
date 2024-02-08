@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pi Control Panel</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pi Control Panel</title>
+    <style>
+        /* Kickass CSS styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding-top: 50px;
+        }
+        button {
+            padding: 15px 25px;
+            margin: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #008CBA;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #005f73;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pi Control Panel</h1>
+    <button id="fanOn">Turn Fan On</button>
+    <button id="fanOff">Turn Fan Off</button>
+    <button id="toggleDotStar">Toggle DotStar LEDs</button>
+
+    <script>
+        // JavaScript with the power to control
+        document.getElementById('fanOn').addEventListener('click', function() {
+            fetch('/fan/on')
+            .then(response => response.text())
+            .then(data => console.log(data));
+        });
+
+        document.getElementById('fanOff').addEventListener('click', function() {
+            fetch('/fan/off')
+            .then(response => response.text())
+            .then(data => console.log(data));
+        });
+
+        document.getElementById('toggleDotStar').addEventListener('click', function() {
+            fetch('/toggle-dotstar')
+            .then(response => response.text())
+            .then(data => console.log(data));
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
