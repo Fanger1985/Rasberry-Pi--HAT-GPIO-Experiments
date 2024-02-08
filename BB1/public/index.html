@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - BB0.1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPIO Control Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>GPIO Control Panel</h1>
+    <button id="fan-toggle">Toggle Fan</button>
+    <button id="led-toggle">Toggle LED</button>
+  <button id="dotstar-toggle">Toggle DotStar LEDs</button>
+<button id="backlight-toggle">Toggle Display Backlight</button>
+  <!-- Add this section below the buttons in your existing HTML file -->
+<div id="pin-status">
+    <h2>Pin Status</h2>
+    <ul>
+        <li>Fan (GPIO 4): <span id="fan-status">Off</span></li>
+        <li>LED (GPIO 5): <span id="led-status">Off</span></li>
+        <li>DotStar Data (GPIO 5): <span id="dotstar-data-status">Off</span></li>
+        <li>DotStar Clock (GPIO 6): <span id="dotstar-clock-status">Off</span></li>
+        <li>Button #17: <span id="button17-status">Not Pressed</span></li>
+        <li>Joystick Select (GPIO 16): <span id="joystick-select-status">Not Pressed</span></li>
+        <li>Joystick Left (GPIO 22): <span id="joystick-left-status">Not Pressed</span></li>
+        <li>Joystick Up (GPIO 23): <span id="joystick-up-status">Not Pressed</span></li>
+        <li>Joystick Right (GPIO 24): <span id="joystick-right-status">Not Pressed</span></li>
+        <li>Joystick Down (GPIO 27): <span id="joystick-down-status">Not Pressed</span></li>
+        <li>Display Backlight (GPIO 26): <span id="backlight-status">Off</span></li>
+    </ul>
+</div>
+    <div id="log"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#log {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ddd;
+    height: 200px;
+    overflow-y: scroll;
+}
+/* Add this to your existing CSS file */
+#pin-status {
+    margin-top: 20px;
+    background: #fff;
+    padding: 10px;
+}
+
+#pin-status ul {
+    list-style: none;
+    padding: 0;
+}
+
+#pin-status li {
+    margin-bottom: 10px;
+}
