@@ -1,9 +1,6 @@
 import RPi.GPIO as GPIO
 import time
 
-# Clean up any previous GPIO configurations
-GPIO.cleanup()
-
 # Disable GPIO warnings
 GPIO.setwarnings(False)
 
@@ -24,6 +21,10 @@ def toggle_fan(channel):
     current_state = GPIO.input(4)
     GPIO.output(4, not current_state)
     print("Fan toggled!")
+
+# Remove any previous event detections
+GPIO.remove_event_detect(17)
+GPIO.remove_event_detect(16)
 
 # Add event detection for buttons
 GPIO.add_event_detect(17, GPIO.FALLING, callback=toggle_backlight, bouncetime=300)
